@@ -1,18 +1,23 @@
 import React from "react";
-import { Category } from "../redux/reducers/categories";
+import { useDispatch } from "react-redux";
+import { Category, selectCategory } from "../redux/reducers/categories";
 
 type Props = {
-  categories: Category[]
+  categories: Category[],
 }
 
 const Categories: React.FC<Props> = ({ categories }) => {
 
-  const onSelectCategory = (name: string): void => console.log(`${name} selected`)
+  const dispatch = useDispatch();
+
+  const dispatchSelection = (name: string) => {
+    dispatch(selectCategory(name))
+  };
 
   return (
     <div>
-      {categories.map(c => <button key={c.id} onClick={() => onSelectCategory(c.name)}>{c.name}</button>)}
-    </div>
+        {categories.map(c => <button key={c.id} onClick={() => dispatchSelection(c.name)}>{c.name}</button>)}
+      </div>
   );
 }
 

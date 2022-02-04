@@ -9,7 +9,22 @@ const initialState = () => ({
         id: 2,
         name: 'Cycling'
       }
-    ]
+    ],
+    selectedCategory: 'None'
+  },
+  sprintIntervals: {
+    list: [
+      {
+        value: 10
+      },
+      {
+        value: 20
+      },
+      {
+        value: 30
+      },
+    ],
+    counter: 0
   }
 })
 

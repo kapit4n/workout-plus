@@ -1,12 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useSelector } from "react-redux";
 import categories from "./reducers/categories";
-
+import sprintIntervals from "./reducers/sprintIntervals";
 
 
 export const store = configureStore({
   reducer: {
-    categories: categories
+    categories: categories,
+    sprintIntervals: sprintIntervals
   }
 })
 

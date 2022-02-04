@@ -1,13 +1,13 @@
 import React from "react";
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Categories from "../containers/Categories";
+import Main from "../containers/Main";
 
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Categories />}>
+        <Route path="/" element={<Main />}>
         </Route>
       </Routes>
     </Router>
