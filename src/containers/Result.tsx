@@ -9,9 +9,13 @@ const Result: React.FC = () => {
   const counter = useAppSelector(selectCounter)
 
   return (
-    <div>
-      {selectedCategory}
-      {counter}
+    <div style={{width: '100%', fontSize: '3rem', justifyContent: 'center', display: 'flex' }}>
+      <div style={{margin: '2rem'}}>
+       {selectedCategory}
+      </div>
+      <div style={{margin: '2rem'}}>
+       {counter}
+      </div>
     </div>
   );
 }

@@ -15,8 +15,8 @@ const Categories: React.FC<Props> = ({ categories }) => {
   };
 
   return (
-    <div>
-        {categories.map(c => <button key={c.id} onClick={() => dispatchSelection(c.name)}>{c.name}</button>)}
+    <div style={{display: 'flex', justifyContent: 'space-around', margin: '2rem'}}>
+        {categories.map(c => <button style={{width: '20rem', height: '5rem'}} key={c.id} onClick={() => dispatchSelection(c.name)}>{c.name}</button>)}
       </div>
   );
 }
