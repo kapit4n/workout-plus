@@ -13,7 +13,7 @@ const SprintIntervalComponent: React.FC<SprintIntervalProps> = ({ intervals }) =
 
   return (
     <div style={{display: 'flex', width: '100%', justifyContent: 'space-around', margin: '2rem' }}>
-      {intervals.map(i => <button style={{width: '30%', height: '10rem'}} key={i.value} onClick={() => newLocal(i.value)}>{i.value}</button>)}
+      {intervals.map(i => <button style={{width: '30%', height: '10rem', fontSize: '2rem'}} key={i.value} onClick={() => newLocal(i.value)}>{i.value}</button>)}
     </div>
   );
 }
