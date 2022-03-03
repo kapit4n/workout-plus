@@ -4,9 +4,10 @@ import { Category, selectCategory } from "../redux/reducers/categories";
 
 type Props = {
   categories: Category[],
+  selectedCategory: String
 }
 
-const Categories: React.FC<Props> = ({ categories }) => {
+const Categories: React.FC<Props> = ({ categories, selectedCategory }) => {
 
   const dispatch = useDispatch();
 
@@ -16,7 +17,11 @@ const Categories: React.FC<Props> = ({ categories }) => {
 
   return (
     <div style={{display: 'flex', justifyContent: 'space-around', margin: '2rem'}}>
-        {categories.map(c => <button style={{width: '20rem', height: '5rem'}} key={c.id} onClick={() => dispatchSelection(c.name)}>{c.name}</button>)}
+        {categories.map(c => <button 
+          style={selectedCategory == c.name ? 
+          {width: '20rem', height: '5rem', background: 'blue'}: 
+          {width: '20rem', height: '5rem'} } key={c.id} 
+          onClick={() => dispatchSelection(c.name)}>{c.name}</button>)}
       </div>
   );
 }
